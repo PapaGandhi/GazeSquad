@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane prefHeight="555.0" prefWidth="459.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <TabPane prefHeight="300.0" prefWidth="749.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Scene 1">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <items>
+                            <Button mnemonicParsing="false" text="Button" />
+                          </items>
+                        </ToolBar>
+                     </top>
+                     <left>
+                        <GridPane gridLinesVisible="true" prefHeight="495.0" prefWidth="152.0" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" text="Button" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <ImageView fitHeight="76.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../../../../../../../Library/Application%20Support/Apple/iChat%20Icons/Flowers/Sunflower.gif" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </GridPane>
+                     </left>
+                  </BorderPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</StackPane>
