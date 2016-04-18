@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane prefHeight="668.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane prefHeight="668.0" prefWidth="1225.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SimpleController">
    <children>
       <TabPane prefHeight="300.0" prefWidth="749.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -32,25 +33,22 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button mnemonicParsing="false" text="Button" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text fx:id="textDrag" onDragDetected="#drag" onDragDropped="#dropped" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                               <ImageView fitHeight="76.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../../../../../../../Library/Application%20Support/Apple/iChat%20Icons/Flowers/Sunflower.gif" />
                                  </image>
                               </ImageView>
+                              <Button mnemonicParsing="false" text="Button" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                      </left>
-                     <center>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-                     </center>
                      <right>
-                        <TabPane prefHeight="595.0" prefWidth="250.0" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+                        <TabPane prefHeight="595.0" prefWidth="263.0" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
                           <tabs>
                             <Tab text="Button Form">
                                  <content>
-                                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                    <VBox prefHeight="562.0" prefWidth="282.0" spacing="10.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Button Text" />
                                           <TextField promptText="Type Button Text Here" />
@@ -63,6 +61,9 @@
                                           <RadioButton mnemonicParsing="false" text="Start/Stop Data Collection" toggleGroup="$buttonfunction" />
                                           <RadioButton mnemonicParsing="false" text="Next Scene" toggleGroup="$buttonfunction" />
                                        </children>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" top="10.0" />
+                                       </padding>
                                     </VBox>
                                  </content>
                               </Tab>
@@ -73,6 +74,9 @@
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="What text do you want to appear here?" wrappingWidth="133.6171875" />
                                           <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Type message here." />
                                        </children>
+                                       <padding>
+                                          <Insets left="5.0" right="5.0" top="10.0" />
+                                       </padding>
                                     </VBox>
                                  </content>
                               </Tab>
@@ -83,11 +87,27 @@
                                           <TextField promptText="Input filename here" />
                                           <Button mnemonicParsing="false" text="Browse" />
                                        </children>
+                                       <padding>
+                                          <Insets left="5.0" top="10.0" />
+                                       </padding>
                                     </HBox>
                                  </content></Tab>
                           </tabs>
                         </TabPane>
                      </right>
+                     <center>
+                        <GridPane gridLinesVisible="true" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </GridPane>
+                     </center>
                   </BorderPane>
                </content>
           </Tab>
